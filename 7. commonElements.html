@@ -9,8 +9,9 @@
     <body></body>
     <script>
         function commonElements(arrs) {
-            arrs[0] = arrs[0].filter(el => arrs[1].includes(el));
-            arrs[0] = arrs[0].filter(el => arrs[2].includes(el));
+            for (let i = 1; i < arrs.length; i++) {
+                arrs[0] = arrs[0].filter(el => arrs[i].includes(el));
+            }
             return arrs[0];
         }
         console.log(
